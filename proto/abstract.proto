@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/scotty-c/abstract/proto";
+
+package abstract;
+
+service Network {
+  rpc SendJsonData(JsonRequest) returns (JsonResponse);
+}
+
+message JsonRequest {
+  string json_data = 1;
+}
+
+message JsonResponse {
+  string response_message = 1;
+}
